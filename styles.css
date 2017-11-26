@@ -1,0 +1,134 @@
+.body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h1 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.button-submit {
+  display: block;
+  border: none;
+  border-radius: 0.3125rem;
+  padding: 0.625rem 0.9375rem;
+  outline: none;
+  background-color: #9ccdee;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.button-submit:not([disabled]):hover, 
+.button-submit:not([disabled]):focus, 
+.button-submit:not([disabled]):active {
+  padding: 0.5625rem 0.875rem;
+  border: 0.0625rem solid #000000;
+}
+.button-submit[disabled] {
+  opacity: 0.75;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.button-submit--loading {
+  background-color: #f2ca27;
+}
+
+.button-submit--ready {
+  background-color: #2cc06a;
+}
+
+.button-submit--fail {
+  background-color: #f44030;
+}
+
+.button-submit__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1;
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  color: #000000;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.button-submit__text[hidden] {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+.button-submit__symbol {
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-left: 0.625rem;
+}
+
+.button-submit__icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: #000000;
+}
+
+.button-submit__loading-animation,
+.button-submit__loading-animation:after {
+  display: inline-block;
+  border-radius: 50%;
+  width: 0.925rem;
+  height: 0.925rem;
+}
+
+.button-submit__loading-animation {
+  font-size: 0.25em;
+  border-top: 1em solid rgba(0, 0, 0, 0.2);
+  border-right: 1em solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1em solid rgba(0, 0, 0, 0.2);
+  border-left: 1em solid #000000;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: loader-animation 1.5s infinite linear;
+  animation: loader-animation 1.5s infinite linear;
+}
+
+@-webkit-keyframes loader-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.hide {
+  display: none;
+}
+
+/* reset button for example only */
+.button-submit__reset {
+  margin-top: 2rem;
+  display: block;
+}

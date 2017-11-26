@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Accessabilly microinteractions button</title>
+  </head>
+
+  <body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="hide"><defs><symbol id="submit" viewBox="0 0 32 32"><path d="M2.68 28l27.987-12-27.987-12-0.013 9.333 20 2.667-20 2.667z"></path></symbol><symbol id="fail" viewBox="0 0 32 32"><path d="M1.333 28h29.333l-14.667-25.333-14.667 25.333zM17.333 24h-2.667v-2.667h2.667v2.667zM17.333 18.667h-2.667v-5.333h2.667v5.333z"></path></symbol><symbol id="ready" viewBox="0 0 32 32"><path d="M16 2.667c-7.36 0-13.333 5.973-13.333 13.333s5.973 13.333 13.333 13.333 13.333-5.973 13.333-13.333-5.973-13.333-13.333-13.333zM13.333 22.667l-6.667-6.667 1.88-1.88 4.787 4.773 10.12-10.12 1.88 1.893-12 12z"></path></symbol></defs></svg>
+    
+    <form action="#" aria-labelledby="form-heading">
+      <h1 id="form-heading">Some E-Mail Submit Form</h1>
+      
+      <button type="submit" aria-live="assertive" aria-relevant="additions text" aria-atomic="true" class="button-submit">
+        <span class="button-submit__text button-submit__text--submit">
+          Send E-Mail
+          <span class="button-submit__symbol">
+            <svg class="button-submit__icon" aria-hidden="true">
+              <use xlink:href="#submit"></use>
+            </svg>
+          </span>
+        </span>
+
+        <span class="button-submit__text button-submit__text--loading" id="status-loading" role="status" hidden>
+          Sending
+          <span class="button-submit__symbol button-submit__loading-animation" aria-hidden="true"></span>
+        </span>
+
+        <span class="button-submit__text button-submit__text--fail" id="status-fail" role="alert" hidden>
+          Failed
+          <span class="button-submit__symbol">
+            <svg class="button-submit__icon" aria-hidden="true">
+              <use xlink:href="#fail"></use>
+            </svg>
+          </span>
+        </span>
+
+        <span class="button-submit__text button-submit__text--ready" id="status-ready" role="status" hidden>
+          Ready 
+          <span class="button-submit__symbol">
+            <svg class="button-submit__icon" aria-hidden="true">
+              <use xlink:href="#ready"></use>
+            </svg>
+          </span>
+        </span>  
+       
+      </button>
+    </form>
+
+    <button class="button-submit__reset">reset</button>
+
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
